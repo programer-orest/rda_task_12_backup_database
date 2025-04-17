@@ -7,5 +7,5 @@ if [ -n "$DB_USER" ] && [ -n "$DB_PASSWORD" ]; then
   mysql -u $DB_USER_NAME -p$DB_USER_PASSWORD  ShopDBReserve < backup-no-create-db.sql
   mysql -u $DB_USER_NAME -p$DB_USER_PASSWORD  ShopDBDevelopment < backup-no-create-db.sql
 else
-  exit 1
+  echo 'DB_USER and DB_PASSWORD must be set'
 fi
